@@ -1,0 +1,11 @@
+<div *ngIf="aluno != undefined else naoEncontrado">
+    <h5>Detalhe do Aluno</h5>
+    <p>Id: {{ aluno.id }}</p>
+    <p>Nome: {{ aluno.nome }}</p>
+    <p>Email: {{ aluno.email }}</p>
+    <a class="waves-effect waves-light btn" (click)="editarAluno()">Editar</a>
+</div>
+
+<ng-template #naoEncontrado>
+    <h5>Aluno não encontrado</h5>
+</ng-template>
